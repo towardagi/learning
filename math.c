@@ -6,3 +6,7 @@ int factorial(int n) {
   } 
   return factorial(n-1) * n;
 }
+
+int permutation(int n, int r) {
+  return factorial(n)/factorial(n-r);
+}
