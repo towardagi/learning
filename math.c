@@ -23,3 +23,12 @@ int isPrime(int n) {
   }
   return 1;
 }
+
+int nextPrime(int n) {
+  while (1) { 
+    n++;
+    if (isPrime(n)) {
+      return n;
+    }
+  }
+}
