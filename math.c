@@ -1,4 +1,5 @@
 #include <stdio.h>
+typedef unsigned long long ull;
 
 int factorial(int n) {
   if (n == 1) {
@@ -29,6 +30,18 @@ int nextPrime(int n) {
     n++;
     if (isPrime(n)) {
       return n;
+    }
+  }
+}
+
+void primorialArray(int size, ull primorialArray[]) {
+  int current_prime = 2;
+  int current_primorial = 2;
+  for (int i=0; i<size; i++) {
+    primorialArray[i] = current_primorial;
+    if (i<size-1) {
+      current_prime = nextPrime(current_prime);
+      current_primorial *= current_prime;
     }
   }
 }
