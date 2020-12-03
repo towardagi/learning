@@ -34,14 +34,14 @@ int nextPrime(int n) {
   }
 }
 
-void primorialProductArray(int size, ull primorialProductArray[]) {
+void primorialArray(int size, ull primorialArray[]) {
   int current_prime = 2;
-  int current_primorial_product = 2;
+  ull current_primorial = 2;
   for (int i=0; i<size; i++) {
-    primorialProductArray[i] = current_primorial_product;
+    primorialArray[i] = current_primorial;
     if (i<size-1) {
       current_prime = nextPrime(current_prime);
-      current_primorial_product *= current_prime;
+      current_primorial *= current_prime;
     }
   }
 }
