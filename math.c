@@ -45,3 +45,22 @@ void primorialArray(int size, ull primorialArray[]) {
     }
   }
 }
+
+int gcd(int a, int b) {
+  int lhs = a;
+  int div = b;
+  int r = a%b;
+
+  while (r != 0) {
+    lhs = div;
+    div = r;
+    r = lhs%div;
+  }
+
+  return div;
+}
+
+int gcd_recursive(int a, int b) {
+  if (b == 0) return a;
+  return gcd_recursive(b, a%b);
+}
